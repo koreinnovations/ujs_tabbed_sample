@@ -1,0 +1,34 @@
+<div id="entity2-table">
+  <table>
+    <tr>
+      <th>Field3</th>
+      <th>Field4</th>
+      <th>Field5</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% @entity2s.each do |entity2| %>
+        <tr>
+          <td><%= entity2.field3 %></td>
+          <td><%= entity2.field4 %></td>
+          <td><%= entity2.field5 %></td>
+          <td><%= link_to 'Show', entity2 %></td>
+          <td><%= link_to 'Edit', edit_entity2_path(entity2), :remote => true %></td>
+          <td><%= link_to 'Destroy', entity2, confirm: 'Are you sure?', method: :delete %></td>
+        </tr>
+    <% end %>
+  </table>
+
+  <br />
+
+  <%= link_to 'New Entity2', new_entity2_path %>
+
+
+  <div class="replaceable-form">
+
+  </div>
+
+
+</div>

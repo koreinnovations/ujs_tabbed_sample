@@ -1,0 +1,28 @@
+<script>
+    $(function() {
+        $( "#tabs" ).tabs({
+            ajaxOptions: {
+                error: function( xhr, status, index, anchor ) {
+                    $( anchor.hash ).html(
+                            "Couldn't load this tab. We'll try to fix this as soon as possible. " +
+                                    "If this wouldn't be a demo." );
+                }
+            }
+        });
+    });
+</script>
+
+<div id="tabs">
+
+  <ul>
+    <li><a href="#tabs-1">Preloaded</a></li>
+    <li><%= link_to "Entity Group 1", entity1s_path(:no_layout => true) %></li>
+    <li><%= link_to "Entity Group 2", entity2s_path(:no_layout => true) %></li>
+    <li><%= link_to "Entity Group 3", entity3s_path(:no_layout => true) %></li>
+  </ul>
+
+  <div id="tabs-1">
+
+  </div>
+
+</div>
